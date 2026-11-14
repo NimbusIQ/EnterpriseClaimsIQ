@@ -1,0 +1,9 @@
+{
+  "name": "Nimbus iQ AI Admin",
+  "description": "The Sovereign AI Operating System for Storm Intelligence and Claims Orchestration. Engineering deterministic cognitive systems for autonomous enterprise operations.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}

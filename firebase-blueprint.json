@@ -1,0 +1,53 @@
+{
+  "entities": {
+    "Inspection": {
+      "title": "Inspection",
+      "description": "Represents a roof inspection.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "address": { "type": "string" },
+        "status": { "type": "string", "enum": ["pending", "completed"] },
+        "inspectorId": { "type": "string" }
+      },
+      "required": ["id", "address", "status"]
+    },
+    "Report": {
+      "title": "Report",
+      "description": "Represents a generated inspection report.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "inspectionId": { "type": "string" },
+        "url": { "type": "string" }
+      },
+      "required": ["id", "inspectionId", "url"]
+    },
+    "Lead": {
+      "title": "Lead",
+      "description": "Represents a potential customer.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "address": { "type": "string" },
+        "damageStatus": { "type": "string" }
+      },
+      "required": ["id", "name", "address"]
+    }
+  },
+  "firestore": {
+    "/inspections/{inspectionId}": {
+      "schema": "Inspection",
+      "description": "Collection of inspections."
+    },
+    "/reports/{reportId}": {
+      "schema": "Report",
+      "description": "Collection of reports."
+    },
+    "/leads/{leadId}": {
+      "schema": "Lead",
+      "description": "Collection of leads."
+    }
+  }
+}

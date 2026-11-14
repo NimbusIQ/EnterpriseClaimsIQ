@@ -1,0 +1,33 @@
+{
+  "name": "nimbus-iq-ai-deploy-iq",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx server.ts",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "tsc --noEmit",
+    "firebase:deploy": "npm run build && firebase deploy"
+  },
+  "dependencies": {
+    "@google/genai": "^1.29.0",
+    "@types/express": "^5.0.6",
+    "express": "^5.2.1",
+    "firebase": "^12.12.0",
+    "fuse.js": "^7.1.0",
+    "lucide-react": "^1.7.0",
+    "motion": "^12.38.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
+    "tsx": "^4.21.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}

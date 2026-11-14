@@ -1,0 +1,98 @@
+export interface JobRecord {
+  pm: string;
+  po: string;
+  lastName: string;
+  firstName: string;
+  address: string;
+  roofCrew: string;
+  roofLabor: number;
+  roofMaterial: number;
+  gutters: number;
+  fence: number;
+  screens: number;
+  windows: number;
+  paint: number;
+  chimCap: number;
+  garageDoor: number;
+  acElectric: number;
+  miscReceipts: number;
+  permitCost: number;
+  warranty: string;
+  finalDate: string;
+}
+
+export interface ABCSupplyOrder {
+  orderNumber: string;
+  orderType: 'Delivery' | 'Will Call' | 'Credit Memo' | 'Express Pickup' | 'Adjustment' | 'Draft';
+  poNumber: string;
+  dateOrdered: string;
+  total: number;
+  status: string;
+  deliveryAddress: string;
+  shippingBranch: string;
+  deliveryDate?: string;
+  deliveryTime?: string;
+}
+
+export const JOB_LEDGER_DATA: JobRecord[] = [
+  { pm: "CS", po: "2301", lastName: "HEN", firstName: "HAGIT", address: "8309 SHASTA DR", roofCrew: "MIGUEL HERRERA", roofLabor: 2380.00, roofMaterial: 4268.49, gutters: 1046.90, fence: 0, screens: 822.70, windows: 173.20, paint: 0, chimCap: 625.00, garageDoor: 0, acElectric: 0, miscReceipts: 21.73, permitCost: 307.25, warranty: "5 YEAR", finalDate: "8/7/2019" },
+  { pm: "DM", po: "2302", lastName: "HIDER", firstName: "SCOTT & WENDY", address: "3908 MORNING DOVE", roofCrew: "MIGUEL HERRERA", roofLabor: 3558.00, roofMaterial: 6176.18, gutters: 1499.30, fence: 1090.00, screens: 375.00, windows: 400.00, paint: 370.00, chimCap: 0, garageDoor: 750.00, acElectric: 0, miscReceipts: 68.12, permitCost: 0, warranty: "5 YEAR", finalDate: "7/17/2019" },
+  { pm: "DM", po: "2303", lastName: "SAJAN", firstName: "MURAD", address: "1819 PALO PINTO DR", roofCrew: "MIGUEL HERRERA", roofLabor: 4377.71, roofMaterial: 7115.46, gutters: 1252.80, fence: 920.10, screens: 946.19, windows: 1.00, paint: 350.00, chimCap: 0, garageDoor: 800.00, acElectric: 0, miscReceipts: 21.09, permitCost: 150.00, warranty: "5 YEAR", finalDate: "7/17/2019" },
+  { pm: "DM", po: "2304", lastName: "KOLEV", firstName: "NATALIE", address: "618 SPRING HILL DR", roofCrew: "MIGUEL HERRERA", roofLabor: 3009.00, roofMaterial: 7322.56, gutters: 1116.50, fence: 430.00, screens: 687.39, windows: 0, paint: 750.00, chimCap: 0, garageDoor: 0, acElectric: 0, miscReceipts: 59.94, permitCost: 0, warranty: "OC PREFERRED", finalDate: "7/17/2019" },
+  { pm: "CS", po: "2305", lastName: "BARKER", firstName: "JULIE", address: "501 HAMPSHIRE DR", roofCrew: "MIGUEL HERRERA", roofLabor: 3147.24, roofMaterial: 5685.06, gutters: 1262.10, fence: 600.00, screens: 170.49, windows: 0, paint: 225.00, chimCap: 0, garageDoor: 880.00, acElectric: 0, miscReceipts: 421.99, permitCost: 104.00, warranty: "5 YEAR", finalDate: "12/20/2019" },
+  { pm: "CS", po: "2306", lastName: "BURROW", firstName: "ROY", address: "6808 GRAND MESA PKWY", roofCrew: "MIGUEL HERRERA", roofLabor: 3469.98, roofMaterial: 5807.60, gutters: 991.80, fence: 0, screens: 0, windows: 0, paint: 230.00, chimCap: 0, garageDoor: 0, acElectric: 0, miscReceipts: 0, permitCost: 200.00, warranty: "5 YEAR", finalDate: "7/26/2019" },
+  { pm: "CS", po: "2307", lastName: "DALHBERG", firstName: "KURT", address: "3204 ESTES PARK LN", roofCrew: "OMAR RAMIREZ", roofLabor: 4497.34, roofMaterial: 5287.59, gutters: 0, fence: 0, screens: 0, windows: 0, paint: 0, chimCap: 0, garageDoor: 0, acElectric: 0, miscReceipts: 0, permitCost: 237.25, warranty: "5 YEAR", finalDate: "7/17/2019" },
+  { pm: "CS", po: "2308", lastName: "DOLAN", firstName: "DAVID", address: "8009 DESERT DUNES", roofCrew: "MIGUEL HERRERA", roofLabor: 3362.19, roofMaterial: 4518.82, gutters: 0, fence: 0, screens: 0, windows: 0, paint: 0, chimCap: 0, garageDoor: 0, acElectric: 0, miscReceipts: 486.52, permitCost: 200.00, warranty: "5 YEAR", finalDate: "10/16/2019" },
+  { pm: "DM", po: "2309", lastName: "RICE", firstName: "BRIAN", address: "15138 BULL RUN DR.", roofCrew: "OMAR RAMIREZ", roofLabor: 3242.72, roofMaterial: 5959.74, gutters: 1383.30, fence: 1980.00, screens: 470.89, windows: 0, paint: 375.00, chimCap: 575.00, garageDoor: 0, acElectric: 0, miscReceipts: 529.74, permitCost: 0, warranty: "5 YEAR", finalDate: "7/30/2019" },
+  { pm: "CS", po: "2310", lastName: "GRAY", firstName: "TIFFANY", address: "1150 NORFOLK", roofCrew: "FERNANDO MARTINEZ", roofLabor: 3523.84, roofMaterial: 6537.63, gutters: 1209.30, fence: 0, screens: 0, windows: 487.13, paint: 0, chimCap: 0, garageDoor: 0, acElectric: 0, miscReceipts: 0, permitCost: 20.00, warranty: "5 YEAR", finalDate: "7/30/2019" },
+  { pm: "DM", po: "2311", lastName: "JARRETT", firstName: "KRIS", address: "15407 CROWN COVE", roofCrew: "RAMUNDO RAMOS", roofLabor: 6096.19, roofMaterial: 8021.08, gutters: 1752.90, fence: 918.00, screens: 151.55, windows: 200.00, paint: 450.00, chimCap: 625.00, garageDoor: 1215.00, acElectric: 0, miscReceipts: 71.33, permitCost: 153.00, warranty: "5 YEAR", finalDate: "8/26/2019" },
+  { pm: "DM", po: "2312", lastName: "TANNER", firstName: "NORMAN", address: "15196 BARDWELL", roofCrew: "MICKEY CRUZ", roofLabor: 7709.09, roofMaterial: 10128.64, gutters: 2495.30, fence: 2370.00, screens: 0, windows: 6956.00, paint: 475.00, chimCap: 0, garageDoor: 0, acElectric: 0, miscReceipts: 839.74, permitCost: 0, warranty: "5 YEAR", finalDate: "7/30/2019" },
+  { pm: "DM", po: "2313", lastName: "CAVALIERO", firstName: "EDDIE", address: "11275 GERANIUM", roofCrew: "FERNANDO MARTINEZ", roofLabor: 4413.34, roofMaterial: 7598.31, gutters: 1547.50, fence: 1178.00, screens: 644.09, windows: 0, paint: 200.00, chimCap: 0, garageDoor: 3695.00, acElectric: 150.00, miscReceipts: 266.56, permitCost: 0, warranty: "5 YEAR", finalDate: "8/26/2019" },
+  { pm: "DM", po: "2314", lastName: "BURCH", firstName: "BRIAN", address: "15596 TEALWOOD", roofCrew: "JOSE ACOSTA", roofLabor: 4197.27, roofMaterial: 6947.54, gutters: 2697.00, fence: 1052.00, screens: 568.31, windows: 0, paint: 150.00, chimCap: 625.00, garageDoor: 700.00, acElectric: 0, miscReceipts: 1506.00, permitCost: 0, warranty: "5 YEAR", finalDate: "8/14/2019" },
+  { pm: "DM", po: "2315", lastName: "ROWE", firstName: "DANIEL", address: "15572 TEALWOOD", roofCrew: "JOSE ACOSTA", roofLabor: 3858.44, roofMaterial: 5913.19, gutters: 1541.30, fence: 440.00, screens: 0, windows: 0, paint: 0, chimCap: 0, garageDoor: 0, acElectric: 0, miscReceipts: 0, permitCost: 153.00, warranty: "5 YEAR", finalDate: "8/21/2019" },
+  { pm: "DM", po: "2316", lastName: "BUCHANAN", firstName: "STEVE", address: "15498 FOX MEADOW", roofCrew: "JOSE ACOSTA", roofLabor: 6250.52, roofMaterial: 7633.07, gutters: 1674.60, fence: 1811.00, screens: 378.88, windows: 0, paint: 0, chimCap: 0, garageDoor: 2139.00, acElectric: 150.00, miscReceipts: 209.85, permitCost: 153.00, warranty: "5 YEAR", finalDate: "8/26/2019" },
+  { pm: "CS", po: "2317", lastName: "MOON", firstName: "GERALD", address: "661 LOCKTON DR", roofCrew: "MIGUEL HERRERA", roofLabor: 3108.40, roofMaterial: 5413.22, gutters: 1003.40, fence: 1794.00, screens: 0, windows: 0, paint: 0, chimCap: 0, garageDoor: 0, acElectric: 0, miscReceipts: 43.22, permitCost: 104.00, warranty: "5 YEAR", finalDate: "8/15/2019" },
+  { pm: "DM", po: "2444", lastName: "HARBECK", firstName: "JOHN", address: "7816 SAN JACINTO", roofCrew: "JONATHAN ZEMPOALTECA", roofLabor: 5590.00, roofMaterial: 10343.63, gutters: 1668.50, fence: 700.00, screens: 300.00, windows: 0, paint: 0, chimCap: 0, garageDoor: 0, acElectric: 0, miscReceipts: 335.10, permitCost: 200.00, warranty: "5 YEAR", finalDate: "12/13/2021" },
+  { pm: "DM", po: "2454", lastName: "JEWELL", firstName: "ROBERT", address: "410 OXFORD PLACE", roofCrew: "MIGUEL HERRERA", roofLabor: 5721.04, roofMaterial: 9583.11, gutters: 1618.80, fence: 980.00, screens: 350.00, windows: 0, paint: 0, chimCap: 0, garageDoor: 0, acElectric: 0, miscReceipts: 1627.43, permitCost: 100.00, warranty: "OC TOTAL", finalDate: "3/27/2022" },
+  { pm: "CS", po: "2455", lastName: "JENKINS", firstName: "MARK", address: "740 HUNTERS PLACE", roofCrew: "JOSE ACOSTA", roofLabor: 6978.44, roofMaterial: 11442.80, gutters: 2258.10, fence: 2000.00, screens: 0, windows: 0, paint: 650.00, chimCap: 0, garageDoor: 950.00, acElectric: 0, miscReceipts: 527.56, permitCost: 104.00, warranty: "5 YEAR", finalDate: "3/27/2022" },
+  { pm: "CS", po: "2457", lastName: "JENKINS", firstName: "CHAD", address: "751 HAMPSHIRE CT", roofCrew: "MIGUEL HERRERA", roofLabor: 4713.76, roofMaterial: 9403.09, gutters: 1573.40, fence: 1060.00, screens: 180.00, windows: 1100.00, paint: 850.00, chimCap: 0, garageDoor: 0, acElectric: 7220.00, miscReceipts: 1630.65, permitCost: 100.00, warranty: "5 YEAR", finalDate: "3/27/2022" },
+  { pm: "CS", po: "2458", lastName: "WOODLEY", firstName: "DAVID", address: "710 DEVONSHIRE DR", roofCrew: "MIGUEL HERRERA", roofLabor: 6635.21, roofMaterial: 11540.56, gutters: 1850.60, fence: 2220.00, screens: 0, windows: 0, paint: 0, chimCap: 0, garageDoor: 0, acElectric: 0, miscReceipts: 1389.25, permitCost: 100.00, warranty: "OC TOTAL", finalDate: "3/27/2022" },
+  { pm: "DM", po: "2497", lastName: "OSWALD", firstName: "KEVIN", address: "701 BERKSHIRE DR", roofCrew: "MIGUEL HERRERA", roofLabor: 5380.85, roofMaterial: 10798.82, gutters: 1857.25, fence: 2280.00, screens: 0, windows: 1200.00, paint: 0, chimCap: 0, garageDoor: 4300.00, acElectric: 0, miscReceipts: 861.97, permitCost: 100.00, warranty: "OC TOTAL", finalDate: "11/3/2023" },
+  { pm: "DM", po: "2533", lastName: "BARRY", firstName: "PAT", address: "5741 MEADOWHAVEN DR", roofCrew: "JOSE ACOSTA", roofLabor: 6736.00, roofMaterial: 10349.00, gutters: 3598.50, fence: 1600.00, screens: 2137.00, windows: 1200.00, paint: 0, chimCap: 1000.00, garageDoor: 4292.00, acElectric: 0, miscReceipts: 0, permitCost: 75.00, warranty: "5 YEAR", finalDate: "9/11/2023" },
+  { pm: "DM", po: "2547", lastName: "BURTON", firstName: "CHRIS", address: "979 ROCKPORT LN", roofCrew: "MIGUEL HERRERA", roofLabor: 6955.31, roofMaterial: 12663.27, gutters: 2343.00, fence: 0, screens: 0, windows: 0, paint: 0, chimCap: 0, garageDoor: 0, acElectric: 0, miscReceipts: 657.26, permitCost: 150.00, warranty: "5 YEAR", finalDate: "11/20/2023" },
+  { pm: "DM", po: "2550", lastName: "PI", firstName: "JERRY", address: "1811 TRINIDAD LN", roofCrew: "JOSE ACOSTA", roofLabor: 5466.00, roofMaterial: 12025.65, gutters: 2346.50, fence: 1242.00, screens: 254.39, windows: 0, paint: 528.00, chimCap: 0, garageDoor: 3210.00, acElectric: 0, miscReceipts: 150.28, permitCost: 150.00, warranty: "5 YEAR", finalDate: "9/30/2023" },
+  { pm: "DM", po: "2558", lastName: "ARNOLD-FULTON", firstName: "KIM", address: "705 ROUS FALLS", roofCrew: "JOSE ACOSTA", roofLabor: 5298.00, roofMaterial: 10012.81, gutters: 2565.00, fence: 1500.00, screens: 0, windows: 0, paint: 1390.00, chimCap: 0, garageDoor: 0, acElectric: 0, miscReceipts: 442.20, permitCost: 200.00, warranty: "5 YEAR", finalDate: "12/29/2023" },
+  { pm: "DM", po: "2573", lastName: "RUDOLPH", firstName: "SCOTT", address: "9 HICKORY ST", roofCrew: "NOT LISTED", roofLabor: 7111.38, roofMaterial: 21967.81, gutters: 4270.50, fence: 0, screens: 0, windows: 0, paint: 0, chimCap: 0, garageDoor: 0, acElectric: 0, miscReceipts: 231.75, permitCost: 0, warranty: "5 YEAR", finalDate: "11/11/2023" },
+  { pm: "DM", po: "2574", lastName: "CHEN", firstName: "JIMMY", address: "1912 SAN JACINTO DR", roofCrew: "JOSE ACOSTA", roofLabor: 5805.00, roofMaterial: 10564.20, gutters: 0, fence: 0, screens: 0, windows: 0, paint: 0, chimCap: 0, garageDoor: 0, acElectric: 0, miscReceipts: 0, permitCost: 150.00, warranty: "5 YEAR", finalDate: "12/10/2023" },
+  { pm: "DM", po: "2588", lastName: "WEIHUA", firstName: "ZHANG", address: "2025 CUPRESSUS CT", roofCrew: "JOSE ACOSTA", roofLabor: 5452.00, roofMaterial: 10431.00, gutters: 2289.50, fence: 1218.00, screens: 259.80, windows: 0, paint: 0, chimCap: 0, garageDoor: 0, acElectric: 0, miscReceipts: 0, permitCost: 150.00, warranty: "5 YEAR", finalDate: "11/4/2023" },
+  { pm: "DM", po: "2624", lastName: "PATTON", firstName: "MARVIN", address: "800 NECHES RIVER PLACE", roofCrew: "MIGUEL HERRERA", roofLabor: 6140.00, roofMaterial: 11060.45, gutters: 2265.75, fence: 790.00, screens: 0, windows: 0, paint: 650.00, chimCap: 0, garageDoor: 0, acElectric: 0, miscReceipts: 200.00, permitCost: 0, warranty: "5 YEAR", finalDate: "12/29/2024" },
+  { pm: "DM", po: "2", lastName: "WEISS", firstName: "STEVE", address: "900 ROCK FALLS DR", roofCrew: "JOSE ACOSTA", roofLabor: 6293.00, roofMaterial: 11942.00, gutters: 2327.00, fence: 1850.00, screens: 0, windows: 0, paint: 0, chimCap: 0, garageDoor: 400.00, acElectric: 0, miscReceipts: 99.00, permitCost: 0, warranty: "GAF", finalDate: "2/13/2024" },
+  { pm: "DM", po: "4", lastName: "DEPETRIS", firstName: "DAN", address: "1803 PALO PINTO", roofCrew: "JOSE ACOSTA", roofLabor: 5481.00, roofMaterial: 13548.00, gutters: 250.00, fence: 1800.00, screens: 167.00, windows: 0, paint: 0, chimCap: 0, garageDoor: 1280.00, acElectric: 0, miscReceipts: 99.00, permitCost: 0, warranty: "5 YEAR", finalDate: "2/14/2024" },
+  { pm: "DM", po: "13", lastName: "NELSON", firstName: "RON", address: "1700 CATTLE DR", roofCrew: "JOSE ACOSTA", roofLabor: 8005.00, roofMaterial: 0, gutters: 2484.00, fence: 2790.00, screens: 0, windows: 0, paint: 0, chimCap: 0, garageDoor: 0, acElectric: 175.00, miscReceipts: 0, permitCost: 250.00, warranty: "5 YEAR", finalDate: "6/9/2024" },
+  { pm: "DM", po: "21", lastName: "WIGLEY", firstName: "CHAD", address: "1401 FRISCO HILLS TRAIL", roofCrew: "JOSE ACOSTA", roofLabor: 5641.00, roofMaterial: 10515.00, gutters: 2579.00, fence: 1114.00, screens: 0, windows: 0, paint: 0, chimCap: 0, garageDoor: 0, acElectric: 0, miscReceipts: 380.00, permitCost: 0, warranty: "OC", finalDate: "6/9/2024" },
+  { pm: "DM", po: "55", lastName: "TEGLER", firstName: "ERIC", address: "2113 HOBKIRK HILL", roofCrew: "JOSE ACOSTA", roofLabor: 6238.00, roofMaterial: 10870.00, gutters: 0, fence: 0, screens: 0, windows: 0, paint: 0, chimCap: 0, garageDoor: 0, acElectric: 0, miscReceipts: 200.00, permitCost: 0, warranty: "OC", finalDate: "7/3/2024" },
+  { pm: "DM", po: "66", lastName: "BAY", firstName: "GREG", address: "7804 MEDINA WAY", roofCrew: "JOSE ACOSTA", roofLabor: 5771.00, roofMaterial: 12575.00, gutters: 1818.00, fence: 1400.00, screens: 0, windows: 0, paint: 0, chimCap: 0, garageDoor: 0, acElectric: 0, miscReceipts: 200.00, permitCost: 0, warranty: "OC", finalDate: "10/2/2024" }
+];
+
+export const ABC_SUPPLY_ORDERS: ABCSupplyOrder[] = [
+  { orderNumber: "2007408880", orderType: "Delivery", poNumber: "po801", dateOrdered: "03/16/2026", total: 8957.44, status: "Delivered", deliveryAddress: "801 Llano Falls Drive, McKinney TX 75071", shippingBranch: "459 - Melissa, TX", deliveryDate: "3/17/26" },
+  { orderNumber: "2004731529", orderType: "Delivery", poNumber: "7712", dateOrdered: "12/02/2025", total: 12382.87, status: "Delivered", deliveryAddress: "7712 Weatherford Trace, McKinney TX 75071", shippingBranch: "459 - Melissa, TX", deliveryDate: "12/3/25" },
+  { orderNumber: "2004347095", orderType: "Delivery", poNumber: "1105 Cherry", dateOrdered: "11/13/2025", total: 6875.42, status: "Delivered", deliveryAddress: "1105 Cherry Blossom St, Anna TX 75409", shippingBranch: "203 - Denton, TX", deliveryDate: "11/14/25" },
+  { orderNumber: "2003587981", orderType: "Delivery", poNumber: "1215 Brooklyn", dateOrdered: "10/15/2025", total: 6024.33, status: "Delivered", deliveryAddress: "1215 Brooklyn, Austin TX 75409", shippingBranch: "459 - Melissa, TX", deliveryDate: "10/15/25" },
+  { orderNumber: "2001936652", orderType: "Delivery", poNumber: "7901 medina", dateOrdered: "07/24/2025", total: 13260.83, status: "Delivered", deliveryAddress: "7901 medina way, McKinney TX 75071", shippingBranch: "459 - Melissa, TX", deliveryDate: "7/25/25" },
+  { orderNumber: "2001941077", orderType: "Delivery", poNumber: "1008 cason falls", dateOrdered: "07/24/2025", total: 8602.14, status: "Delivered", deliveryAddress: "1008 cason falls, McKinney TX 75071", shippingBranch: "459 - Melissa, TX", deliveryDate: "7/28/25" },
+  { orderNumber: "2001680014", orderType: "Delivery", poNumber: "1420 caney creek", dateOrdered: "07/07/2025", total: 7859.80, status: "Delivered", deliveryAddress: "1420 caney creek lane, McKinney TX 75071", shippingBranch: "459 - Melissa, TX", deliveryDate: "7/8/25" },
+  { orderNumber: "2001589800", orderType: "Delivery", poNumber: "Marion Hines", dateOrdered: "06/28/2025", total: 11188.23, status: "Delivered", deliveryAddress: "904 Rock Falls, McKinney TX 75071", shippingBranch: "459 - Melissa, TX", deliveryDate: "6/30/25" },
+  { orderNumber: "73085402", orderType: "Delivery", poNumber: "7404 SABINE DR", dateOrdered: "05/08/2025", total: 11642.46, status: "Delivered", deliveryAddress: "7404 SABINE DR, MCKINNEY TX 75071", shippingBranch: "459 - Melissa, TX", deliveryDate: "5/9/25" },
+  { orderNumber: "72994853", orderType: "Delivery", poNumber: "905 CANEY CREEK", dateOrdered: "05/06/2025", total: 10275.60, status: "Delivered", deliveryAddress: "905 CANEY CREEK LANE, MCKINNEY TX", shippingBranch: "459 - Melissa, TX", deliveryDate: "5/7/25" },
+  { orderNumber: "71743430", orderType: "Delivery", poNumber: "1417 MADRID FALLS", dateOrdered: "03/31/2025", total: 7734.96, status: "Delivered", deliveryAddress: "1417 MADRID FALLS, MCKINNEY TX", shippingBranch: "459 - Melissa, TX", deliveryDate: "3/31/25" },
+  { orderNumber: "71528831", orderType: "Delivery", poNumber: "9801 FILLMORE DR", dateOrdered: "03/24/2025", total: 6079.47, status: "Delivered", deliveryAddress: "9801 FILLMORE DR, MCKINNEY TX 75072", shippingBranch: "459 - Melissa, TX", deliveryDate: "3/25/25" },
+  { orderNumber: "70781413", orderType: "Delivery", poNumber: "2317", dateOrdered: "02/28/2025", total: 7633.36, status: "Delivered", deliveryAddress: "661 LOCKTON, PROSPER TX", shippingBranch: "459 - Melissa, TX", deliveryDate: "2/28/25" },
+  { orderNumber: "70750427", orderType: "Delivery", poNumber: "308 HEADWATERS", dateOrdered: "02/27/2025", total: 8210.22, status: "Delivered", deliveryAddress: "308 HEADWATERS, MCKINNEY TX", shippingBranch: "459 - Melissa, TX", deliveryDate: "2/28/25" },
+  { orderNumber: "68944907", orderType: "Delivery", poNumber: "624 BROCK DR", dateOrdered: "12/10/2024", total: 6368.24, status: "Delivered", deliveryAddress: "624 BROCK DRIVE, ANNA TX 75409", shippingBranch: "459 - Melissa, TX", deliveryDate: "12/11/24" },
+  { orderNumber: "65934245", orderType: "Delivery", poNumber: "66", dateOrdered: "09/19/2024", total: 12535.14, status: "Delivered", deliveryAddress: "7804 MEDINA WAY, MCKINNEY TX 75071", shippingBranch: "203 - Denton, TX", deliveryDate: "9/24/24" },
+  { orderNumber: "64731600", orderType: "Delivery", poNumber: "7504 GUADALUPE WAY", dateOrdered: "08/20/2024", total: 7397.46, status: "Delivered", deliveryAddress: "7504 GUADALUPE WAY, MCKINNEY TX 75071", shippingBranch: "203 - Denton, TX", deliveryDate: "8/26/24" },
+  { orderNumber: "64678423", orderType: "Delivery", poNumber: "809 SPRING FALLS", dateOrdered: "08/19/2024", total: 9718.05, status: "Delivered", deliveryAddress: "809 SPRING FALLS, MCKINNEY TX 75071", shippingBranch: "203 - Denton, TX", deliveryDate: "8/21/24" },
+  { orderNumber: "63906547", orderType: "Delivery", poNumber: "40", dateOrdered: "07/31/2024", total: 9159.53, status: "Delivered", deliveryAddress: "908 ROCK FALLS, MCKINNEY TX", shippingBranch: "203 - Denton, TX", deliveryDate: "8/1/24" },
+  { orderNumber: "62403413", orderType: "Delivery", poNumber: "2113 HOBKIRK HILL", dateOrdered: "06/21/2024", total: 11191.28, status: "Delivered", deliveryAddress: "2113 HOBKIRK HILL, MCKINNEY TX 75070", shippingBranch: "203 - Denton, TX", deliveryDate: "6/24/24" }
+];
